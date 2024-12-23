@@ -76,7 +76,7 @@ def music_player():
           screen.blit(background, (0, 0))
           
           rotated_record = pygame.transform.rotate(record, angle)
-          record_rect = rotated_record.get_rect(center=record_rect.center)
+          record_rect = record.get_rect(center=(WINDOW_WIDTH // 2, WINDOW_HEIGHT // 2))
 
           screen.blit(rotated_record, record_rect.topleft)
 
