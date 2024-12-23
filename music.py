@@ -13,7 +13,6 @@ MUSIC_FOLDER = "W music"
 WINDOW_TITLE = "Music Player"
 WINDOW_WIDTH = pygame.display.Info().current_w 
 WINDOW_HEIGHT = pygame.display.Info().current_h
-Image_assests = "C:\\Users\\sakth\\OneDrive\\Documents\\python projects\\J.A.R.V.I.S\\Image assets\\"
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption(WINDOW_TITLE)
 fullscreen = False
@@ -56,8 +55,8 @@ def music_player():
      global fullscreen
      angle = 0
      clock = pygame.time.Clock()
-     record = pygame.image.load("C:\\Users\\sakth\\OneDrive\\Documents\\python projects\\J.A.R.V.I.S\\Image assets\\record.png").convert_alpha()
-     background = pygame.image.load("C:\\Users\\sakth\\OneDrive\\Documents\\python projects\\J.A.R.V.I.S\\Image assets\\background.jpg").convert()
+     record = pygame.image.load("record.png").convert_alpha() # Path to record.png on your computer which will be in "Image assets"
+     background = pygame.image.load("background.jpg").convert() # Path to background.jpg on your computer, also in "Image assets"
      record_rect = record.get_rect()
      running = True
  
@@ -68,9 +67,7 @@ def music_player():
           return
      
      current_index = 0
-     print("\nType the songname or 'random' to play a random song")
      display_songs(songs)
-     print("\nOptions: [skip, continue, pause, rewind, previous, play, stop, random, list] or cosrisponding number to the soundtrack")
 
      playing = False
      toggle_fullscreen()
